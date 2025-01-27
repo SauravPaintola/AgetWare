@@ -3,9 +3,9 @@ import getProductDetails from "@/utils/getProductDetails";
 import Image from "next/image";
 import Link from "next/link";
 import AddToCartButton from "@/components/AddToCartButton"; // Import the client-side button component
-
-const ProductPage = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = await params;
+type tParams = Promise<{ slug: string }>;
+const ProductPage = async (props: { params: tParams }) => {
+  const { slug } = await props.params;
   const data: Product = await getProductDetails({ slug });
 
   const colors = [

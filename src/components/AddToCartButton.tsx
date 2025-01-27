@@ -1,7 +1,7 @@
 // AddToCartButton.tsx (Client-Side Component)
 "use client"; // Mark this as a client-side component
 
-import { useCart } from "@/context/CartContext"; // Import the useCart hook
+import { useCart } from "@/context/CartContext"; 
 
 interface AddToCartButtonProps {
   productId: number;
